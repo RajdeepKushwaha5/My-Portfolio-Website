@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rajdeep Singh Kushwaha | Full Stack & Blockchain Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#0A0A0A',
+                        light: '#F5F5F5',
+                        accent: {
+                            DEFAULT: '#14b8a6', // teal-500
+                            hover: '#0d9488'  // teal-600
+                        }
+                    },
+                    animation: {
+                        'gradient-x': 'gradient-x 15s ease infinite',
+                        'text-shine': 'text-shine 5s linear infinite',
+                    },
+                    keyframes: {
+                        'gradient-x': {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            }
+                        },
+                        'text-shine': {
+                            '0%': {
+                                'background-position': '0% 50%',
+                            },
+                            '100%': {
+                                'background-position': '100% 50%',
+                            },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* For custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #171717;
+        }
+        html.dark ::-webkit-scrollbar-track {
+            background: #171717;
+        }
+        html:not(.dark) ::-webkit-scrollbar-track {
+             background: #e5e7eb;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #14b8a6;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            background-clip: content-box;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #0d9488;
+        }
+
+        /* --- Animated Pet Cat --- */
+        .pet-container {
+            position: fixed;
+            bottom: 0.5rem;
+            left: 0;
+            width: 80px;
+            height: 64px;
+            z-index: 40; /* Below header/chatbot but above content */
+            pointer-events: auto; /* Allow hover */
+            cursor: pointer;
+            transform: translateX(-80px); /* Start off-screen */
+            animation: run-across 15s linear 2;
+        }
+
+        .pet-container:hover {
+            animation-play-state: paused;
+        }
+
+        .pet-container:hover .cat-front-paw-hoverable {
+             /* Stop running animation and raise paw */
+            animation: none;
+            transform: rotate(-70deg) translateY(-10px);
+            transition: transform 0.2s ease-out;
+        }
+        
+        .pet-container:hover .cat-head {
+             transform: rotate(-15deg) translate(-5px, 2px);
+             transition: transform 0.2s ease-out;
+        }
+
+        .pet-container:hover .cat-leg,
+        .pet-container:hover .cat-body-group,
+        .pet-container:hover .cat-tail {
+            animation-play-state: paused;
+        }
+
+        @keyframes run-across {
+            0% {
+                transform: translateX(-80px);
+            }
+            100% {
+                transform: translateX(100vw);
+            }
+        }
+
+        .cat-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Leg animation */
+        .cat-leg-front-1, .cat-leg-back-2 {
+            animation: run-cycle-1 0.4s linear infinite;
+        }
+        .cat-leg-back-1, .cat-leg-front-2 {
+            animation: run-cycle-2 0.4s linear infinite;
+        }
+
+        @keyframes run-cycle-1 {
+            0%, 100% { transform: rotate(35deg); }
+            50% { transform: rotate(-35deg); }
+        }
+
+        @keyframes run-cycle-2 {
+            0%, 100% { transform: rotate(-35deg); }
+            50% { transform: rotate(35deg); }
+        }
+
+        /* Tail animation */
+        .cat-tail {
+            transform-origin: 25px 45px; /* Updated for new SVG geometry */
+            animation: swish-tail 1s ease-in-out infinite;
+        }
+
+        @keyframes swish-tail {
+            0%, 100% { transform: rotate(10deg); }
+            50% { transform: rotate(-10deg); }
+        }
+
+        /* Body bounce */
+        .cat-body-group {
+            animation: bounce 0.4s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-2px); }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.10.0",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.6",
+    "lucide-react": "https://esm.sh/lucide-react@^0.525.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-light dark:bg-dark text-slate-800 dark:text-slate-200 font-sans antialiased overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
