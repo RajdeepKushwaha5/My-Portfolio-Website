@@ -113,7 +113,7 @@ export const Header: React.FC = () => {
                             <NavItem href="#skills">Skills</NavItem>
                         </nav>
                         <a
-                            href="/resume.pdf"
+                            href="https://drive.google.com/file/d/1F26BpadhfGePh1VgHtp_54oaehPwAIWu/view?usp=drive_link"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hidden md:inline-block px-4 py-2 text-sm font-medium border rounded-full transition-colors duration-300 border-slate-800 dark:border-slate-200 text-slate-800 dark:text-slate-200 hover:bg-slate-800 hover:text-white dark:hover:bg-slate-200 dark:hover:text-black"
