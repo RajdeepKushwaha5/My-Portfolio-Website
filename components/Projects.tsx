@@ -18,7 +18,7 @@ const projectsData: Project[] = [
         title: 'AgentVerse',
         description: 'A playground for autonomous AI agents. Experiment with different agent configurations and watch them interact.',
         tags: ['React', 'AI Agents', 'Vercel'],
-        liveUrl: 'https://agent-verse-4bdpqrfci-moron3753-gmailcoms-projects.vercel.app/',
+        liveUrl: 'https://agent-verse-mocha.vercel.app/',
         codeUrl: 'https://github.com/RajdeepKushwaha5/AgentVerse',
     },
     {
