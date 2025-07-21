@@ -40,7 +40,7 @@ export const About: React.FC = () => {
                          <div className="absolute inset-0 bg-gradient-to-br from-sky-400 to-purple-600 rounded-full blur-xl opacity-50"></div>
                          <img
                             src="https://drive.google.com/file/d/1NtKBNnBsT9vFcmBBO-NjWoy77SqiOSnh/view?usp=drive_link"
-                            alt="Rajdeep Singh Kushwaha"
+                            alt="Rajdeep Singh Kushwaha Image"
                             className="relative w-full h-full object-cover rounded-full shadow-2xl border-4 border-white dark:border-slate-800"
                         />
                     </div>
