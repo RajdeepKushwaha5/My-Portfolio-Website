@@ -38,9 +38,10 @@ export const About: React.FC = () => {
                 >
                     <div className="relative w-64 h-64">
                          <div className="absolute inset-0 bg-gradient-to-br from-sky-400 to-purple-600 rounded-full blur-xl opacity-50"></div>
-                        <img
-  src="my_image_ghibli_2.jpg"
-  alt="Rajdeep Singh Kushwaha"
+  <img
+  src="/my_image_ghibli.jpg"
+  alt="Rajdeep Singh"
+  loading="lazy"
   className="relative w-full h-full object-cover rounded-full shadow-2xl border-4 border-white dark:border-slate-800"
 />
                     </div>
