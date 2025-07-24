@@ -40,7 +40,6 @@ export const About: React.FC = () => {
                          <div className="absolute inset-0 bg-gradient-to-br from-sky-400 to-purple-600 rounded-full blur-xl opacity-50"></div>
 <img
   src="filnal_image.png"
-{/*       src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" */}
   alt="GitHub Logo"
   className="relative w-full h-full object-cover rounded-full shadow-2xl border-4 border-white dark:border-slate-800"
 />
