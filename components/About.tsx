@@ -38,11 +38,16 @@ export const About: React.FC = () => {
                 >
                     <div className="relative w-64 h-64">
                          <div className="absolute inset-0 bg-gradient-to-br from-sky-400 to-purple-600 rounded-full blur-xl opacity-50"></div>
-                         <img
+{/*                          <img
                             src="/my_image_ghibli.jpg"
                             alt=""
                             className="relative w-full h-full object-cover rounded-full shadow-2xl border-4 border-white dark:border-slate-800"
-                        />
+                        /> */}
+                        <img
+  src="https://avatars.githubusercontent.com/u/9919?s=200&v=4"
+  alt="GitHub Logo"
+  className="relative w-full h-full object-cover rounded-full shadow-2xl border-4 border-white dark:border-slate-800"
+/>
                     </div>
                 </motion.div>
                 <motion.div className="md:col-span-2 text-lg text-slate-600 dark:text-slate-300 space-y-4 leading-relaxed" variants={aboutVariants}>
