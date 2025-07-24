@@ -163,7 +163,7 @@ export const Header: React.FC = () => {
                             <NavItem href="#experience" onClick={closeMenu} isMobile={true}>Experience</NavItem>
                             <NavItem href="#skills" onClick={closeMenu} isMobile={true}>Skills</NavItem>
                             <a
-                                href="/resume.pdf"
+                                href="https://drive.google.com/file/d/1F26BpadhfGePh1VgHtp_54oaehPwAIWu/view?usp=drive_link"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={closeMenu}
