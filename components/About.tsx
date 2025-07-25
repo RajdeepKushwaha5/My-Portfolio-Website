@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
+import profileImage from './filnal_image.png'; 
 
 const SectionHeader: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <h2 className="font-heading text-4xl md:text-5xl font-bold tracking-tighter text-slate-900 dark:text-white mb-12 text-center">
@@ -39,7 +40,7 @@ export const About: React.FC = () => {
                     <div className="relative w-64 h-64">
                          <div className="absolute inset-0 bg-gradient-to-br from-sky-400 to-purple-600 rounded-full blur-xl opacity-50"></div>
 <img
-  src="components/filnal_image.png"
+  src={profileImage}
   alt="Rajdeep Singh"
   className="relative w-full h-full object-cover rounded-full shadow-2xl border-4 border-white dark:border-slate-800"
 />
