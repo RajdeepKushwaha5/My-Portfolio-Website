@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
-import profileImage from './my_image_ghibli.jpg'; 
+import profileImage from './filnal_image.png'; 
 
 const SectionHeader: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <h2 className="font-heading text-4xl md:text-5xl font-bold tracking-tighter text-slate-900 dark:text-white mb-12 text-center">
