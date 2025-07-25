@@ -39,10 +39,11 @@ export const About: React.FC = () => {
                     <div className="relative w-64 h-64">
                          <div className="absolute inset-0 bg-gradient-to-br from-sky-400 to-purple-600 rounded-full blur-xl opacity-50"></div>
 <img
-  src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
-  alt="React Logo"
-  className="relative w-full h-full object-cover rounded-full shadow-2xl border-4 border-white dark:border-slate-800"
+  src="/filnal_image.png"
+  alt="Rajdeep Singh"
+  className="w-40 h-40 object-cover rounded-full shadow-2xl border-4 border-white dark:border-slate-800"
 />
+
 
 
                     </div>
