@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github } from 'lucide-react';
+import { Github, Mail } from 'lucide-react';
 import { XIcon } from './icons/XIcon';
 import { LinkedinIcon } from './icons/LinkedinIcon';
 import { MediumIcon } from './icons/MediumIcon';
@@ -9,12 +9,13 @@ const socialLinks = [
     { name: 'LinkedIn', icon: LinkedinIcon, url: 'https://www.linkedin.com/in/rajdeep-singh-b658a833a/' },
     { name: 'X', icon: XIcon, url: 'https://x.com/rajdeeptwts' },
     { name: 'Medium', icon: MediumIcon, url: 'https://medium.com/@rajdeep01' },
+    { name: 'Email', icon: Mail, url: 'mailto:rajdeepsingh10789@gmail.com' },
 ];
 
 const SocialIcon: React.FC<{ icon: React.ElementType, url: string, name: string }> = ({ icon: Icon, url, name }) => (
     <a
         href={url}
-        target="_blank"
+        target={url.startsWith('mailto:') ? '_self' : '_blank'}
         rel="noopener noreferrer"
         aria-label={name}
         className="text-slate-500 dark:text-slate-400 hover:text-accent dark:hover:text-accent transition-colors duration-300"
