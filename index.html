@@ -32,13 +32,6 @@
                     animation: {
                         'gradient-x': 'gradient-x 15s ease infinite',
                         'text-shine': 'text-shine 5s linear infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                        'glow': 'glow 2s ease-in-out infinite alternate',
-                        'bounce-slow': 'bounce 3s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'slide-up': 'slideUp 0.5s ease-out',
-                        'slide-down': 'slideDown 0.5s ease-out',
-                        'magnetic': 'magnetic 0.3s ease-out',
                     },
                     keyframes: {
                         'gradient-x': {
@@ -58,26 +51,6 @@
                             '100%': {
                                 'background-position': '100% 50%',
                             },
-                        },
-                        'float': {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' }
-                        },
-                        'glow': {
-                            '0%': { 'box-shadow': '0 0 20px rgba(20, 184, 166, 0.5)' },
-                            '100%': { 'box-shadow': '0 0 30px rgba(20, 184, 166, 0.8)' }
-                        },
-                        'slideUp': {
-                            '0%': { transform: 'translateY(100%)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' }
-                        },
-                        'slideDown': {
-                            '0%': { transform: 'translateY(-100%)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' }
-                        },
-                        'magnetic': {
-                            '0%': { transform: 'translate(0, 0)' },
-                            '100%': { transform: 'translate(var(--magnetic-x, 0), var(--magnetic-y, 0))' }
                         }
                     }
                 }

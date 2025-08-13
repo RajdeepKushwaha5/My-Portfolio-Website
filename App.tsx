@@ -9,9 +9,6 @@ import { Experience } from './components/Experience';
 import { Skills } from './components/Skills';
 import { Chatbot } from './components/Chatbot';
 import { CustomCursor } from './components/CustomCursor';
-import { Terminal } from './components/Terminal';
-import { GitHubIntegration } from './components/GitHubIntegration';
-import { FloatingParticles, CodeRain } from './components/EnhancedAnimations';
 import { useTheme } from './hooks/useTheme';
 import { Footer } from './components/Footer';
 import { AnimatedPet } from './components/AnimatedPet';
@@ -22,8 +19,6 @@ const App: React.FC = () => {
     return (
         <>
             <CustomCursor />
-            <FloatingParticles />
-            <CodeRain />
             <div className={`min-h-screen w-full transition-colors duration-500 bg-light dark:bg-dark ${theme}`}>
                 <Header />
                 <main className="container mx-auto px-6 md:px-12">
@@ -49,16 +44,12 @@ const App: React.FC = () => {
                         <section id="skills" className="py-24">
                             <Skills />
                         </section>
-                        <section id="github" className="py-24">
-                            <GitHubIntegration />
-                        </section>
                     </motion.div>
                 </main>
                 <Footer />
             </div>
             <AnimatedPet />
             <Chatbot />
-            <Terminal />
         </>
     );
 };
