@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Bot, MessageSquare, Send, X, Loader2 } from 'lucide-react';
+import { Send, X, Loader2 } from 'lucide-react';
 import type { ChatMessage } from '../types';
 import { createChat } from '../services/geminiService';
 import type { Chat } from '@google/genai';
@@ -10,7 +10,11 @@ const ChatBubble: React.FC<{ message: ChatMessage }> = ({ message }) => {
     const isModel = message.role === 'model';
     return (
         <div className={`flex items-end gap-2 ${isModel ? 'justify-start' : 'justify-end'}`}>
-            {isModel && <div className="flex-shrink-0 w-8 h-8 rounded-full bg-accent flex items-center justify-center text-white"><Bot size={20} /></div>}
+            {isModel && (
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-accent flex items-center justify-center text-white">
+                    <span className="text-sm">🧦</span>
+                </div>
+            )}
             <div
                 className={`max-w-xs md:max-w-md px-4 py-3 rounded-2xl ${isModel
                         ? 'bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200 rounded-bl-none'
@@ -28,7 +32,7 @@ export const Chatbot: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [input, setInput] = useState('');
     const [messages, setMessages] = useState<ChatMessage[]>([
-        { role: 'model', content: "Hi! I'm Vision, Rajdeep's AI assistant. Ask me anything about his skills or projects!" }
+        { role: 'model', content: "Hello! I'm Dobby, Master Rajdeep's assistant. How can Dobby serve you today, kind friend? 🧦" }
     ]);
     const [isLoading, setIsLoading] = useState(false);
     const chatRef = useRef<Chat | null>(null);
@@ -85,7 +89,8 @@ export const Chatbot: React.FC = () => {
                 className="fixed bottom-6 right-6 w-16 h-16 rounded-full bg-accent hover:bg-accent-hover text-white flex items-center justify-center shadow-xl z-50"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                aria-label="Toggle Chat"
+                aria-label="Chat with Dobby"
+                title="Chat with Dobby"
             >
                 <AnimatePresence mode="wait">
                     <motion.div
@@ -95,7 +100,7 @@ export const Chatbot: React.FC = () => {
                         exit={{ opacity: 0, rotate: 90 }}
                         transition={{ duration: 0.3 }}
                     >
-                        {isOpen ? <X size={28} /> : <MessageSquare size={28} />}
+                        {isOpen ? <X size={28} /> : <span className="text-2xl">🧦</span>}
                     </motion.div>
                 </AnimatePresence>
             </motion.button>
@@ -111,11 +116,11 @@ export const Chatbot: React.FC = () => {
                     >
                         <header className="p-4 border-b border-slate-200 dark:border-slate-700 flex items-center space-x-3">
                             <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-white flex-shrink-0">
-                                <Bot size={24} />
+                                <span className="text-lg">🧦</span>
                             </div>
                             <div>
-                                <h3 className="font-bold text-slate-900 dark:text-white">Vision Assistant</h3>
-                                <p className="text-xs text-slate-500 dark:text-slate-400">Powered by Gemini</p>
+                                <h3 className="font-bold text-slate-900 dark:text-white">Dobby Assistant</h3>
+                                <p className="text-xs text-slate-500 dark:text-slate-400">Master Rajdeep's loyal helper</p>
                             </div>
                         </header>
 
